@@ -50,4 +50,4 @@ class System:
         
     def listroot(self):
         for i in files.files:
-            print(f'{i}               {len(i)} bytes')
+            print(f'{i} :: {len(files.files[i])} bytes')

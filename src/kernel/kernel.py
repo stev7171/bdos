@@ -67,8 +67,9 @@ def run(task):
         print("ERROR: incorrect format")
 
 
-call.run_bin_file("TEST.BIN")
+if __name__ == '__main__':
+    call.run_bin_file("LIST.BIN")
 
-run("TESTAPP.RUN")
+    run("TESTAPP.RUN")
 
-input()
+    input()
