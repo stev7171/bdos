@@ -1,11 +1,8 @@
 # BDOS Bootloader
 
-import sys
-sys.path.insert(1, 'src\kernel')
+import syscalls as sysc
 
-import syscalls as sys
-
-call = sys.System()
+call = sysc.System()
 
 kern = call.find_file(filename="KERNEL.BIN")
 
