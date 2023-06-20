@@ -29,3 +29,9 @@ class System:
             files.files[filename] = new_contents
         else:
             print("Error: file doesn't exist")
+
+    def find_file(self, filename):
+        if filename in files.files:
+            return files.files
+        else:
+            print(f"Error: Couldn't find {filename}")
