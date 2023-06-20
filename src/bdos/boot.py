@@ -1,6 +1,6 @@
 # BDOS Bootloader
 
-import kernel.syscalls as sysc
+import syscalls as sysc
 
 call = sysc.System()
 

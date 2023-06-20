@@ -2,8 +2,8 @@
 
 # Imports
 import os
-import files
-import user.programs
+import files as files
+import user.programs as programs
 
 # All syscalls (names are relatively self-explanatory)
 class System:
@@ -32,12 +32,12 @@ class System:
             return 1
 
     def run_os_file(self, filename):
-        os.chdir("src\kernel")
+        os.chdir('src/kernel')
         os.startfile(files.files[filename])
 
     def run_bin_file(self, filename):
         if filename in files.files:
-            program = getattr(user.programs, files.files[filename])
+            program = getattr(programs, files.files[filename])
             program()
             return 0
         else:

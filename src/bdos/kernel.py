@@ -3,7 +3,7 @@
 
 # How to use this in your projects:
 #   1. set "os" variable to True
-#   2. in "os.py", make your os (you can use multiple files, but make sure your main file is "os.py")
+#   2. in "OS.py", make your os (you can use multiple files, but make sure your main file is "os.py")
 #   3. have fun with your OS!
 
 # Don't touch anything else unless you know what you're doing!
@@ -15,7 +15,7 @@ os = False
 
 # Imports
 import syscalls
-import os as OS
+import OS
 
 call = syscalls.System()
 
