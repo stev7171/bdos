@@ -1,20 +1,14 @@
 # All syscalls are in this file
 
 # Imports
+import os
+
 import files
-import kernel
-import src.os.operating_system as operating_system
 
 class System:
-    def __init__(self):
-        kernel.start()
-
     def create_file(self, filename, file_contents):
         files.files[filename] = file_contents
-
-    def start_os(self):
-        operating_system.start()
-    
+   
     def remove_file(self, filename):
         files.files.pop(filename)
     
@@ -29,9 +23,15 @@ class System:
             files.files[filename] = new_contents
         else:
             print("Error: file doesn't exist")
+            return 1
 
     def find_file(self, filename):
         if filename in files.files:
-            return files.files
+            return filename
         else:
             print(f"Error: Couldn't find {filename}")
+            return 1
+
+    def run_bin_file(self, filename):
+        os.chdir('src/kernel')
+        os.startfile(files.files[filename])

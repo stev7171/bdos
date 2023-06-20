@@ -1,7 +1,7 @@
 # BDOS Kernel
 
-def start():
-    pass
+print("Hello world from KERNEL!")
+input()
 
 def run(task):
     pass
