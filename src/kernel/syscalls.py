@@ -3,7 +3,7 @@
 # Imports
 import os
 import files
-import programs
+import user.programs
 
 class System:
     def create_file(self, filename, file_contents):
@@ -36,7 +36,7 @@ class System:
 
     def run_bin_file(self, filename):
         if filename in files.files:
-            program = getattr(programs, files.files[filename])
+            program = getattr(user.programs, files.files[filename])
             program()
             return 0
         else:
