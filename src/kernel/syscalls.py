@@ -16,7 +16,7 @@ class System:
         print(f'{msg}\n')
 
     def get_input(self, prompt):
-        input(prompt)
+        return input(prompt)
 
     def overwrite_file(self, filename, new_contents):
         if filename in files.files:
