@@ -14,4 +14,4 @@ if kern == 1:
     print("Couldn't find KERNEL.BIN!")
     quit()
 else:
-    call.run_bin_file(kern)
+    call.run_os_file(kern)

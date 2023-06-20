@@ -1,7 +1,9 @@
 # BDOS Kernel
 
-print("Hello world from KERNEL!")
-input()
+# Imports
+import syscalls
+
+call = syscalls.System()
 
 def run(task):
     pass

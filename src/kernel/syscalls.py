@@ -2,8 +2,8 @@
 
 # Imports
 import os
-
 import files
+import programs
 
 class System:
     def create_file(self, filename, file_contents):
@@ -30,6 +30,14 @@ class System:
         else:
             return 1
 
-    def run_bin_file(self, filename):
+    def run_os_file(self, filename):
         os.chdir('src/kernel')
         os.startfile(files.files[filename])
+
+    def run_bin_file(self, filename):
+        if filename in files:
+            program = getattr(programs, filename.replace(".BIN", ""))
+            program()
+            return 0
+        else:
+            return 1
