@@ -32,6 +32,7 @@ class System:
             return 1
 
     def run_os_file(self, filename):
+        os.chdir("src\kernel")
         os.startfile(files.files[filename])
 
     def run_bin_file(self, filename):
