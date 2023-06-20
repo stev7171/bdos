@@ -22,5 +22,7 @@ def cli():
             call.println("input: prompts user with specified prompt (returns: [RESULT])")
             call.println("run: runs specified file (options: [RESULT], [INT])")
             call.println("listroot: lists all files that exist")
+            call.println("clear: clears the screen")
+            call.println("exit: exits the OS")
 
         kernel.run_cmd(prompt+"//")

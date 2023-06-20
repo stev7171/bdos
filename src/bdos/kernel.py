@@ -16,6 +16,7 @@ os = False
 # Imports
 import syscalls
 import OS
+import os
 
 call = syscalls.System()
 
@@ -49,19 +50,17 @@ def run(task):
 
                     # Commands
                     if command == "println":
-                        call.println(arg_1)
+                        if arg_1 == "[RESULT]": call.println(sysret)
+                        else: call.println(arg_1)
                     if command == "run":
-                        call.run_bin_file(arg_1)
+                        if arg_1 == "[RESULT]": call.run_bin_file(sysret)
+                        else: call.run_bin_file(arg_1)
                     if command == "listroot":
                         call.listroot(arg_1)
                     if command == "input":
                         sysret = call.get_input(arg_1)
-                    
-                    # Commands with special arguments
-                    if command == "println" and arg_1 == "[RESULT]":
-                        call.println(sysret)
-                    if command == "run" and arg_1 == "[RESULT]":
-                        call.run_bin_file(sysret)
+                    if command == "clear":
+                        os.system("cls")
 
                     # Reset variables
                     arg_count = 0
@@ -114,6 +113,8 @@ def run_cmd(program):
                 call.listroot()
             if command == "input":
                 sysret = call.get_input(arg_1)
+            if command == "clear":
+                os.system("cls")
 
             # Reset variables
             arg_count = 0
