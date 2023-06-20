@@ -108,9 +108,10 @@ def run_cmd(program):
                 else: call.println(arg_1)
             if command == "run":
                 if arg_1 == "[RESULT]": call.get_input(sysret)
+                if arg_1 == "[INT]": run(arg_2)
                 else: call.run_bin_file(arg_1)
             if command == "listroot":
-                call.listroot(arg_1)
+                call.listroot()
             if command == "input":
                 sysret = call.get_input(arg_1)
 
