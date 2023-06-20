@@ -35,8 +35,8 @@ class System:
         os.startfile(files.files[filename])
 
     def run_bin_file(self, filename):
-        if filename in files:
-            program = getattr(programs, filename.replace(".BIN", ""))
+        if filename in files.files:
+            program = getattr(programs, files.files[filename])
             program()
             return 0
         else:
