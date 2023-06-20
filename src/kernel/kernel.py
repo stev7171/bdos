@@ -6,6 +6,9 @@ import syscalls
 call = syscalls.System()
 
 def run(task):
+    # Log the task we're running so that I don't have to figure it out myself
+    print(f"Running task: {task}")
+
     # We don't want to run files that aren't runnables (.RUN)
     if '.RUN' in task:
         program = call.get_file_contents(task)
@@ -67,3 +70,5 @@ def run(task):
 call.run_bin_file("TEST.BIN")
 
 run("TESTAPP.RUN")
+
+input()
