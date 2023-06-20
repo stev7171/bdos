@@ -14,4 +14,3 @@ if kern == 1:
     quit()
 else:
     call.run_os_file(kern)
-    quit()
