@@ -1,4 +1,4 @@
-# All syscalls are in this file
+# All syscalls are in this file (This is part of the kernel, but it made more sence to put it in a seperate file)
 
 # Imports
 import os

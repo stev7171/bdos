@@ -1,4 +1,4 @@
-# BDOS Kernel
+# BDOS Kernel (Syscalls are in "syscalls.py")
 
 # Imports
 import syscalls
