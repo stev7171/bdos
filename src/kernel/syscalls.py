@@ -5,6 +5,7 @@ import os
 import files
 import user.programs
 
+# All syscalls (names are relatively self-explanatory)
 class System:
     def create_file(self, filename, file_contents):
         files.files[filename] = file_contents
