@@ -47,3 +47,7 @@ class System:
             return files.files[filename]
         else:
             return 1
+        
+    def listroot(self):
+        for i in files.files:
+            print(f'{i}               {len(i)} bytes')
