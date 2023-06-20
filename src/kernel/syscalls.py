@@ -22,14 +22,12 @@ class System:
         if filename in files.files:
             files.files[filename] = new_contents
         else:
-            print("Error: file doesn't exist")
             return 1
 
     def find_file(self, filename):
         if filename in files.files:
             return filename
         else:
-            print(f"Error: Couldn't find {filename}")
             return 1
 
     def run_bin_file(self, filename):
