@@ -16,7 +16,7 @@ os = False
 # Imports
 import syscalls
 import OS
-import os
+import os as o
 
 call = syscalls.System()
 
@@ -60,7 +60,7 @@ def run(task):
                     if command == "input":
                         sysret = call.get_input(arg_1)
                     if command == "clear":
-                        os.system("cls")
+                        o.system("cls")
 
                     # Reset variables
                     arg_count = 0
@@ -114,7 +114,7 @@ def run_cmd(program):
             if command == "input":
                 sysret = call.get_input(arg_1)
             if command == "clear":
-                os.system("cls")
+                o.system("cls")
 
             # Reset variables
             arg_count = 0
