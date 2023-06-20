@@ -41,3 +41,9 @@ class System:
             return 0
         else:
             return 1
+    
+    def get_file_contents(self, filename):
+        if filename in files.files:
+            return files.files[filename]
+        else:
+            return 1
