@@ -1,1 +1,0 @@
-I moved "boot.py" to the kernel folder sorry
