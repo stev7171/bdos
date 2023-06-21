@@ -133,4 +133,11 @@ if __name__ == '__main__':
     if os:
         OS.start()
     else:
-        call.run_bin_file("CLI.BIN")
+        cli = call.find_file("CLI.BIN")
+
+        if cli != 1:
+            call.run_bin_file("CLI.BIN")
+        else:
+            print("ERROR: Could not find \"CLI.BIN\"")
+            input("Press enter to quit...")
+            quit()
