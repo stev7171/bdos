@@ -11,12 +11,12 @@ def listroot():
 def cli():
     call = syscalls.System()
     import kernel
-    
+
     while True:
         prompt = call.get_input("> ")
 
         if prompt == 'exit': quit()
-        if prompt == 'help' or prompt == 'help me':
+        elif prompt == 'help' or prompt == 'help me':
             call.println("==== HELP MENU ====")
             call.println("help: brings up this menu")
             call.println("println: prints specified message (options: [RESULT])")
@@ -25,5 +25,4 @@ def cli():
             call.println("listroot: lists all files that exist")
             call.println("clear: clears the screen")
             call.println("exit: exits the OS")
-
-        kernel.run_cmd(prompt+"//")
+        else: kernel.run_cmd(prompt+"//")
