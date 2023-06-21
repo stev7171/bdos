@@ -9,9 +9,10 @@ def listroot():
     call.listroot()
 
 def cli():
+    call = syscalls.System()
+    import kernel
+    
     while True:
-        call = syscalls.System()
-        import kernel
         prompt = call.get_input("> ")
 
         if prompt == 'exit': quit()
