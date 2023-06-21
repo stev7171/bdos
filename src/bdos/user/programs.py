@@ -15,7 +15,7 @@ def cli():
         prompt = call.get_input("> ")
 
         if prompt == 'exit': quit()
-        if prompt == 'help':
+        if prompt == 'help' or prompt == 'help me':
             call.println("==== HELP MENU ====")
             call.println("help: brings up this menu")
             call.println("println: prints specified message (options: [RESULT])")
