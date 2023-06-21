@@ -54,6 +54,7 @@ def run(task):
                         else: call.println(arg_1)
                     if command == "run":
                         if arg_1 == "[RESULT]": call.run_bin_file(sysret)
+                        elif arg_1 == "KERNEL.BIN": print("ERROR: You do not have permission to run this file.")
                         else: call.run_bin_file(arg_1)
                     if command == "listroot":
                         call.listroot(arg_1)
@@ -107,7 +108,8 @@ def run_cmd(program):
                 else: call.println(arg_1)
             if command == "run":
                 if arg_1 == "[RESULT]": call.get_input(sysret)
-                if arg_1 == "[INT]": run(arg_2)
+                elif arg_1 == "[INT]": run(arg_2)
+                elif arg_1 == "KERNEL.BIN": print("ERROR: You do not have permission to run this file.")
                 else: call.run_bin_file(arg_1)
             if command == "listroot":
                 call.listroot()
