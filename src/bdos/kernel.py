@@ -1,5 +1,5 @@
 # BDOS Kernel (Syscalls are in "syscalls.py")
-# Version 1.0
+Version = "1.0.0"
 
 # How to use this in your projects:
 #   1. set "os" variable to True
@@ -117,6 +117,10 @@ def run_cmd(program):
                 sysret = call.get_input(arg_1)
             if command == "clear":
                 o.system("cls")
+            if command == "BDOS":
+                if arg_1 == "[VER]": call.println(f"Bearded Dragon Kernel version {Version}\nMade by stev7171")
+                elif arg_1 == "[CREDIT]": call.println("Bearded Dragon Kernel\nMade by stev7171\nInspired by U-Kernel on Scratch")
+                else: call.println("USAGE: BDOS:<COMMAND>")
 
             # Reset variables
             arg_count = 0
